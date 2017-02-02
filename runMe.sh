@@ -1,2 +1,2 @@
 #!/bin/bash
-node node_modules/cucumber/bin/cucumber.js features/mainPage.feature -f json:test/report/results.json
+node node_modules/cucumber/bin/cucumber.js -r features/ -f json:test/report/results.json
