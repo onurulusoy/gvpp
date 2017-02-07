@@ -46,5 +46,6 @@ Feature: UCD Group Feature
     Then I click UCD Group
     Then I should see the UCD Group
     And I click Delete button
+    Then I should see alert message for delete
     And I click confirmation button
     Then I should see group has been deleted
