@@ -44,7 +44,11 @@ Feature: Hunt Group Feature
     When I see the management side bar
     Then I click Hunt Group
     Then I should see the Hunt Group
+    Then pause
     And I click Delete button
     Then I should see alert message for delete
+    Then pause
     And I click confirmation button
+    Then pause
     Then I should see group has been deleted
+    Then pause
