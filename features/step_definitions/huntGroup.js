@@ -77,6 +77,11 @@ module.exports = function () {
         });
     });
 
+    this.Then('I should see alert message for delete', function () {
+        var condition = seleniumWebdriver.until.elementLocated(By.classPath('m_alert_content'));
+        return this.driver.wait(condition, 10000);
+    });
+    
     this.Then(/^I click confirmation button$/, function () {
         return this.driver.findElement(By.id("ko-notif-ko-notif-1-button-1")).then(function (element) {
             return element.click();
