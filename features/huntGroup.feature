@@ -45,5 +45,6 @@ Feature: Hunt Group Feature
     Then I click Hunt Group
     Then I should see the Hunt Group
     And I click Delete button
+    Then I should see alert message for delete
     And I click confirmation button
     Then I should see group has been deleted
