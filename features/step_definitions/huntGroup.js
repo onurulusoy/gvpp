@@ -18,6 +18,10 @@ module.exports = function () {
             return element.click();
         });
     });
+    
+    this.Then('pause', function () {
+        return this.driver.wait(5000);
+    });
 
     this.Then('I see Groups title', function () {
         var xpath = "//*[@id='smb-manage-content']/div/div/div/div[2]/div[1]/div[2]/div/h3/span/span[1]";
