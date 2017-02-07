@@ -1,7 +1,7 @@
 {
-  "name": "Aksigorta-Demo-Tests",
+  "name": "GVPP/SMB-Demo-Tests",
   "version": "0.0.2",
-  "description": "Aksigorta Demo Test Framework",
+  "description": "GVPP-SMB Demo Test Framework",
   "author": "Onur Ulusoy",
   "dependencies": {
     "async": "^2.1.2",
