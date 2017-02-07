@@ -19,7 +19,7 @@ module.exports = function () {
         });
     });
     
-    this.Then('pause', function () {
+    this.Then(/^pause$/, function () {
         return this.driver.wait(5000);
     });
 
