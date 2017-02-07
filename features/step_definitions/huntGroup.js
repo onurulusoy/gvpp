@@ -84,7 +84,7 @@ module.exports = function () {
     });
 
     this.Then('I should see group has been deleted', function () {
-        var xpath = "//*[@id='smb-manage-content']/div/div/div/div[2]/div[2]";
+        var xpath = "//*[@id='smb-manage-content']/div/div/div/div[2]/div[2]/comment()[1]";
         var condition = seleniumWebdriver.until.elementLocated({xpath: xpath});
         return this.driver.wait(condition, 10000);
     });
