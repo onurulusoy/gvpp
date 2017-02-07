@@ -9,7 +9,7 @@ module.exports = function () {
 
     this.When(/^I see the management side bar$/, function () {
         var condition = seleniumWebdriver.until.elementLocated(By.className("left pushy-left do_pushy_close"));
-        return this.driver.wait(condition, 10000);
+        return this.driver.wait(condition, 15000);
     });
 
     this.Then(/^I click Hunt Group$/, function () {
@@ -22,7 +22,7 @@ module.exports = function () {
     this.Then('I see Groups title', function () {
         var xpath = "//*[@id='smb-manage-content']/div/div/div/div[2]/div[1]/div[2]/div/h3/span/span[1]";
         var condition = seleniumWebdriver.until.elementLocated({xpath: xpath});
-        return this.driver.wait(condition, 5000);
+        return this.driver.wait(condition, 10000);
     });
 
     this.Then(/^I click Add button/, function () {
@@ -34,7 +34,7 @@ module.exports = function () {
     this.When('I see Group Name field', function () {
         var xpath = "//*[@id='mdlBdy']/form/fieldset/div[2]/div/input";
         var condition = seleniumWebdriver.until.elementLocated({xpath: xpath});
-        return this.driver.wait(condition, 5000);
+        return this.driver.wait(condition, 10000);
     });
 
     this.Then(/^I write "([^"]*)" group name$/, function (text) {
@@ -68,7 +68,7 @@ module.exports = function () {
     this.Then('I should see the Hunt Group', function () {
         var xpath = "//*[@id='smb-manage-content']/div/div/div/div[2]/div[2]/div/div/div/div/group-list-item/div/div/div/div[2]/div[1]";
         var condition = seleniumWebdriver.until.elementLocated({xpath: xpath});
-        return this.driver.wait(condition, 5000);
+        return this.driver.wait(condition, 10000);
     });
 
     this.Then(/^I click Delete button/, function () {
@@ -84,9 +84,9 @@ module.exports = function () {
     });
 
     this.Then('I should see group has been deleted', function () {
-        var xpath = "//*[@id='smb-manage-content']/div/div/div/div[2]/div[2]/comment()[1]";
+        var xpath = "//*[@id='smb-manage-content']/div/div/div/div[2]/div[2]";
         var condition = seleniumWebdriver.until.elementLocated({xpath: xpath});
-        return this.driver.wait(condition, 10000);
+        return this.driver.wait(condition, 20000);
     });
 
     this.Then('Processing Error Message should be', function (errorMessages) {
@@ -111,7 +111,7 @@ module.exports = function () {
 
     this.Then(/^I should see the Processing Error Message$/, function () {
         var condition = seleniumWebdriver.until.elementLocated(By.className("m_alert_content"));
-        return this.driver.wait(condition, 20000);
+        return this.driver.wait(condition, 25000);
     });
 
 };
