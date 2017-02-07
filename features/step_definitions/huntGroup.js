@@ -78,7 +78,7 @@ module.exports = function () {
     });
 
     this.Then('I should see alert message for delete', function () {
-        var condition = seleniumWebdriver.until.elementLocated(By.classPath('m_alert_content'));
+        var condition = seleniumWebdriver.until.elementLocated(By.className('m_alert_content'));
         return this.driver.wait(condition, 10000);
     });
     
